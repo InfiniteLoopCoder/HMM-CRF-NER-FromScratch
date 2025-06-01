@@ -3,7 +3,7 @@ import pickle
 from collections import defaultdict
 import math
 
-# Constant for unknown words/tags, used to avoid issues with log(0)
+# Constant for unknown words/tags, used for smoothing to avoid log(0).
 SMOOTHING_FACTOR = 1e-10
 
 def train(input_path, model_path):
@@ -58,7 +58,7 @@ def train(input_path, model_path):
     pi = [0.0] * num_tags
     total_sentences = len(sentences)
     if total_sentences == 0 or num_tags == 0 or V == 0:
-        print("Error: Training data is empty or does not contain enough information (no sentences, tags, or words). Cannot train model.")
+        print("Error: Training data is empty or does not contain enough information. Cannot train model.")
         # Save a placeholder model or exit
         model_data = {
             'pi': [], 'A': [], 'B': [], 'word_to_idx': {}, 'tag_to_idx': {},
