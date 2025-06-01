@@ -6,6 +6,9 @@ This repository contains implementations of three different models for Named Ent
 3.  **Transformer-CRF**: A neural network model combining a Transformer encoder with a CRF layer for state-of-the-art performance.
 
 The models are trained and evaluated on CoNLL-formatted data.
+## Performance
+
+*   This implementation (template-crf/transformer-crf) can easily achieve 0.99+ F1-Score on train set and 0.93+ F1-Score on validation set.
 
 ## Project Structure
 
@@ -17,7 +20,7 @@ The models are trained and evaluated on CoNLL-formatted data.
 │   └── tag.txt           # List of possible tags
 ├── crf_ner.py            # Implementation of the Linear Chain CRF model
 ├── hmm_ner.py            # Implementation of the Hidden Markov Model
-├── transformer_crf_ner.py # Implementation of the Transformer-CRF model
+├── transformer_ner.py # Implementation of the Transformer-CRF model
 └── README.md             # This file
 ```
 
@@ -131,7 +134,7 @@ python crf_ner.py predict --model crf_model.pkl --input ./English/validation.txt
 *   `--input`: Path to the input file for prediction.
 *   `--output`: Path to save the prediction results.
 
-### 3. Transformer-CRF (`transformer_crf_ner.py`)
+### 3. Transformer-CRF (`transformer_ner.py`)
 
 This model uses a Transformer encoder to learn rich contextual representations of words, followed by a CRF layer to model tag dependencies.
 
@@ -147,7 +150,7 @@ This script also integrates with Weights & Biases (`wandb`) for experiment track
 **Training:**
 
 ```bash
-python transformer_crf_ner.py train --input ./English/train.txt --model transformer_crf_model.pth --epochs 5 --lr 0.0001
+python transformer_ner.py train --input ./English/train.txt --model transformer_crf_model.pth --epochs 5 --lr 0.0001
 ```
 
 *   `--input`: Path to the training data file.
@@ -160,16 +163,10 @@ The `MAX_SEQ_LEN` is dynamically calculated based on the training data (rounded 
 **Prediction:**
 
 ```bash
-python transformer_crf_ner.py predict --model transformer_crf_model.pth --input ./English/validation.txt --output transformer_crf_predictions.txt
+python transformer_ner.py predict --model transformer_crf_model.pth --input ./English/validation.txt --output transformer_crf_predictions.txt
 ```
 
 *   `--model`: Path to the trained Transformer-CRF model file.
 *   `--input`: Path to the input file for prediction.
 *   `--output`: Path to save the prediction results.
 
-## Notes
-
-*   The example data in the `English/` directory is small and intended for quick testing. For robust models, larger datasets are required.
-*   The Transformer-CRF model is generally expected to provide the best performance among the three, especially with sufficient training data, due to its ability to learn complex contextual features.
-*   Ensure that the tag set implied by your training data is consistent. The `tag.txt` file in `English/` is an example and is not directly used by the scripts (tag sets are derived from the training data).
-*   For GPU usage with PyTorch models (CRF and Transformer-CRF), ensure you have a compatible CUDA version and PyTorch build. The scripts will automatically try to use a GPU if available. 

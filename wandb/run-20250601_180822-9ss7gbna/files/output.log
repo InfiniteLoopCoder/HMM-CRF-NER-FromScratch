@@ -1,0 +1,8 @@
+/home/core/anaconda3/envs/GNN/lib/python3.12/site-packages/torch/nn/modules/transformer.py:379: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(
+Starting training loop...
+Epochs: 100%|█████████████████████████████████████████████████████████████████| 2/2 [1:13:15<00:00, 2197.51s/it]
+                                                                                                                
+Epoch 1 completed. Average Loss: 64.3273
+Epoch 2 completed. Average Loss: 23.1497
+Training complete. Model saved to test_zh.pkl

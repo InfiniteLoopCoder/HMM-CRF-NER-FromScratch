@@ -3,11 +3,11 @@ import pickle
 from collections import defaultdict
 import math
 
-# Constant for unknown words/tags, used for smoothing to avoid log(0).
+# Used for smoothing to avoid log(0).
 SMOOTHING_FACTOR = 1e-10
 
 def train(input_path, model_path):
-    """Trains the HMM model and saves it to a file."""
+    # Train the HMM model and save it to a file
     print(f"Starting training...")
 
     word_counts = defaultdict(int)
@@ -125,7 +125,7 @@ def train(input_path, model_path):
 
 
 def predict(model_path, input_path, output_path):
-    """Loads a model and predicts tags for a given input file."""
+    # Load a model and predict tags for a given input file.
     print(f"Running prediction...")
     with open(model_path, 'rb') as f:
         model_data = pickle.load(f)

@@ -1,0 +1,18 @@
+/home/core/anaconda3/envs/GNN/lib/python3.12/site-packages/torch/nn/modules/transformer.py:379: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(
+Starting training loop...
+Epochs:  50%|██████████████████████████████████                                  | 1/2 [10:44<10:44, 644.35s/it]
+Traceback (most recent call last):                                                                              
+Epoch 1 completed. Average Loss: 9.0049
+  File "/home/core/NER/transformer_crf_ner.py", line 558, in <module>
+    break # All sentences processed, exit outer loop
+  File "/home/core/NER/transformer_crf_ner.py", line 429, in train_model
+    n_heads=N_HEADS,
+               ^^^^^^
+  File "/home/core/NER/transformer_crf_ner.py", line 186, in calculate_loss
+    total_log_Z = torch.logsumexp(final_scores, dim=1) # [batch_size]
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/core/NER/transformer_crf_ner.py", line 158, in _calculate_log_partition_function
+    seq_len = emissions.size(0)
+
+KeyboardInterrupt

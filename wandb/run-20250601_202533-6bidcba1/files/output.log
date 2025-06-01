@@ -1,0 +1,75 @@
+/home/core/anaconda3/envs/GNN/lib/python3.12/site-packages/torch/nn/modules/transformer.py:379: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(
+
+=== DEBUG INFO ===
+num_tags: 11
+tag_to_idx: {'B-LOC': 0, 'B-MISC': 1, 'B-ORG': 2, 'B-PER': 3, 'I-LOC': 4, 'I-MISC': 5, 'I-ORG': 6, 'I-PER': 7, 'O': 8, '<START>': 9, '<STOP>': 10}
+START_TAG index: 9
+STOP_TAG index: 10
+Transition matrix shape: torch.Size([11, 11])
+Hidden2tag output size: 11
+==================
+
+Vocabulary size: 23625
+Number of sentences: 14041
+Tags in training data: {'O', 'B-PER', 'I-ORG', 'B-LOC', 'B-ORG', 'B-MISC', 'I-PER', 'I-MISC', 'I-LOC'}
+Starting training loop...
+                                                                                                                
+Epoch 2/2:  14%|████████▊                                                      | 61/439 [02:15<13:35,  2.16s/it]
+
+Loss Debug (batch 0):
+  True path score: -1.7020
+  Log partition: 43.5891
+  Loss: 45.2911
+  Emission stats - min: -5.4293, max: 5.0006, mean: 0.0697
+
+Loss Debug (batch 100):
+  True path score: 59.5373
+  Log partition: 65.6370
+  Loss: 6.0997
+  Emission stats - min: -4.7037, max: 8.3819, mean: 0.6173
+
+Loss Debug (batch 200):
+  True path score: 75.0551
+  Log partition: 82.3173
+  Loss: 7.2622
+  Emission stats - min: -5.1202, max: 9.7651, mean: 0.5296
+
+Loss Debug (batch 300):
+  True path score: 68.8697
+  Log partition: 73.3438
+  Loss: 4.4742
+  Emission stats - min: -5.3218, max: 10.9160, mean: 0.5360
+
+Loss Debug (batch 400):
+  True path score: 77.2432
+  Log partition: 82.5688
+  Loss: 5.3255
+  Emission stats - min: -5.0370, max: 10.3748, mean: 0.5203
+Epoch 1 completed. Average Loss: 7.3149
+
+Loss Debug (batch 500):
+  True path score: 91.2284
+  Log partition: 94.0300
+  Loss: 2.8016
+  Emission stats - min: -6.6739, max: 11.7940, mean: 0.4793
+
+Loss Debug (batch 600):
+  True path score: 105.5502
+  Log partition: 110.1414
+  Loss: 4.5912
+  Emission stats - min: -6.0886, max: 12.0601, mean: 0.3825
+
+Loss Debug (batch 700):
+  True path score: 95.6923
+  Log partition: 101.0024
+  Loss: 5.3101
+  Emission stats - min: -5.9165, max: 11.8830, mean: 0.4060
+
+Loss Debug (batch 800):
+  True path score: 106.5467
+  Log partition: 110.8300
+  Loss: 4.2833
+  Emission stats - min: -6.4948, max: 12.0851, mean: 0.4060
+Epoch 2 completed. Average Loss: 4.0738
+Training complete. Model saved to test_en.pkl

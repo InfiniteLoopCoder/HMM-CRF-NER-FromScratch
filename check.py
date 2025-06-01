@@ -41,13 +41,10 @@ def check(language, gold_path, my_path):
     return
 
 if __name__ == "__main__":
-    model = input("Model (1/2/3/b->bonus): ")
-    while model not in ['1', '2', '3', 'b']:
-        print("Invalid model. Please choose 1, 2, 3 or b.")
-        model = input("Model (1/2/3/b->bonus): ")
-    
-    if model == 'b':
-        model = 'bonus'
+    model = input("Model (1/2/3): ")
+    while model not in ['1', '2', '3']:
+        print("Invalid model. Please choose 1, 2, 3.")
+        model = input("Model (1/2/3): ")
 
     dataset = input("Dataset (t->train/v->validation/test): ")
     while dataset not in ['t', 'v', 'test']:

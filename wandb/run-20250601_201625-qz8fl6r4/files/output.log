@@ -1,0 +1,25 @@
+/home/core/anaconda3/envs/GNN/lib/python3.12/site-packages/torch/nn/modules/transformer.py:379: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(
+Starting training loop...
+Epochs:  50%|██████████████████████████████████                                  | 1/2 [08:56<08:56, 536.30s/it]
+Traceback (most recent call last):                                                                              
+Epoch 1 completed. Average Loss: 9.6154
+  File "/home/core/NER/transformer_crf_ner.py", line 583, in <module>
+  File "/home/core/NER/transformer_crf_ner.py", line 459, in train_model
+    tag_indices = [self.tag_to_idx[t] for t in tags] # Map tags to indices
+                            ^^^^^^^^^^^
+KeyboardInterrupt
+Exception ignored in atexit callback: <function _start_and_connect_service.<locals>.teardown_atexit at 0x7e959256dd00>
+Traceback (most recent call last):
+  File "/home/core/anaconda3/envs/GNN/lib/python3.12/site-packages/wandb/sdk/lib/service_connection.py", line 94, in teardown_atexit
+    conn.teardown(hooks.exit_code)
+  File "/home/core/anaconda3/envs/GNN/lib/python3.12/site-packages/wandb/sdk/lib/service_connection.py", line 226, in teardown
+    self._router.join()
+  File "/home/core/anaconda3/envs/GNN/lib/python3.12/site-packages/wandb/sdk/interface/router.py", line 75, in join
+    self._thread.join()
+  File "/home/core/anaconda3/envs/GNN/lib/python3.12/threading.py", line 1149, in join
+    self._wait_for_tstate_lock()
+  File "/home/core/anaconda3/envs/GNN/lib/python3.12/threading.py", line 1169, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt:

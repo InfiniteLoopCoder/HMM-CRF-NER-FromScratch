@@ -1,0 +1,66 @@
+_wandb:
+    value:
+        cli_version: 0.19.11
+        m: []
+        python_version: 3.12.8
+        t:
+            "1":
+                - 1
+                - 55
+            "2":
+                - 1
+                - 55
+            "3":
+                - 2
+                - 13
+                - 16
+                - 23
+                - 55
+            "4": 3.12.8
+            "5": 0.19.11
+            "8":
+                - 5
+            "12": 0.19.11
+            "13": linux-x86_64
+batch_size:
+    value: 32
+dropout:
+    value: 0.1
+embedding_dim:
+    value: 128
+hidden_dim:
+    value: 256
+learning_rate:
+    value: 0.001
+max_seq_len:
+    value: 128
+num_epochs:
+    value: 20
+num_heads:
+    value: 4
+num_layers:
+    value: 2
+num_sentences:
+    value: 14041
+tag_size:
+    value: 10
+tags:
+    value:
+        - <PAD>
+        - B-LOC
+        - B-MISC
+        - B-ORG
+        - B-PER
+        - I-LOC
+        - I-MISC
+        - I-ORG
+        - I-PER
+        - O
+total_params:
+    value: 3290370
+trainable_params:
+    value: 3290370
+vocab_size:
+    value: 23625
+weight_decay:
+    value: 1e-05

@@ -1,0 +1,16 @@
+{"time":"2025-06-01T20:25:33.60973617+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/home/core/NER/wandb/run-20250601_202533-6bidcba1/logs/debug-core.log"}
+{"time":"2025-06-01T20:25:34.707192903+08:00","level":"INFO","msg":"created new stream","id":"6bidcba1"}
+{"time":"2025-06-01T20:25:34.707210615+08:00","level":"INFO","msg":"stream: started","id":"6bidcba1"}
+{"time":"2025-06-01T20:25:34.707239815+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"6bidcba1"}
+{"time":"2025-06-01T20:25:34.707256593+08:00","level":"INFO","msg":"sender: started","stream_id":"6bidcba1"}
+{"time":"2025-06-01T20:25:34.70727907+08:00","level":"INFO","msg":"handler: started","stream_id":"6bidcba1"}
+{"time":"2025-06-01T20:25:35.026460348+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-01T20:56:44.22361531+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-01T20:56:44.223655328+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-01T20:56:45.224661686+08:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.469542137,"progress":"2.5KB/2.5KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.469484206,"progress":"208B/208B"},{"desc":"uploading config.yaml","runtime_seconds":0.241692562,"progress":"764B/764B"}],"total_operations":3}}
+{"time":"2025-06-01T20:56:45.609372384+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-01T20:56:46.262714223+08:00","level":"INFO","msg":"stream: closing","id":"6bidcba1"}
+{"time":"2025-06-01T20:56:46.262728056+08:00","level":"INFO","msg":"handler: closed","stream_id":"6bidcba1"}
+{"time":"2025-06-01T20:56:46.262739588+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"6bidcba1"}
+{"time":"2025-06-01T20:56:46.262790351+08:00","level":"INFO","msg":"sender: closed","stream_id":"6bidcba1"}
+{"time":"2025-06-01T20:56:46.262793521+08:00","level":"INFO","msg":"stream: closed","id":"6bidcba1"}

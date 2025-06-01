@@ -1,0 +1,23 @@
+2025-06-01 20:16:25,536 INFO    MainThread:346729 [wandb_setup.py:_flush():70] Current SDK version is 0.19.11
+2025-06-01 20:16:25,536 INFO    MainThread:346729 [wandb_setup.py:_flush():70] Configure stats pid to 346729
+2025-06-01 20:16:25,536 INFO    MainThread:346729 [wandb_setup.py:_flush():70] Loading settings from /home/core/.config/wandb/settings
+2025-06-01 20:16:25,536 INFO    MainThread:346729 [wandb_setup.py:_flush():70] Loading settings from /home/core/NER/wandb/settings
+2025-06-01 20:16:25,536 INFO    MainThread:346729 [wandb_setup.py:_flush():70] Loading settings from environment variables
+2025-06-01 20:16:25,536 INFO    MainThread:346729 [wandb_init.py:setup_run_log_directory():724] Logging user logs to /home/core/NER/wandb/run-20250601_201625-qz8fl6r4/logs/debug.log
+2025-06-01 20:16:25,536 INFO    MainThread:346729 [wandb_init.py:setup_run_log_directory():725] Logging internal logs to /home/core/NER/wandb/run-20250601_201625-qz8fl6r4/logs/debug-internal.log
+2025-06-01 20:16:25,536 INFO    MainThread:346729 [wandb_init.py:init():852] calling init triggers
+2025-06-01 20:16:25,536 INFO    MainThread:346729 [wandb_init.py:init():857] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.01, 'epochs': 2, 'batch_size': 32, 'calculated_max_seq_len': 128, 'embedding_dim': 256, 'transformer_hidden_dim': 512, 'transformer_heads': 8, 'transformer_layers': 3, 'dropout': 0.1, 'device': 'cuda', '_wandb': {}}
+2025-06-01 20:16:25,536 INFO    MainThread:346729 [wandb_init.py:init():893] starting backend
+2025-06-01 20:16:25,536 INFO    MainThread:346729 [wandb_init.py:init():897] sending inform_init request
+2025-06-01 20:16:25,538 INFO    MainThread:346729 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-06-01 20:16:25,538 INFO    MainThread:346729 [wandb_init.py:init():907] backend started and connected
+2025-06-01 20:16:25,538 INFO    MainThread:346729 [wandb_init.py:init():1005] updated telemetry
+2025-06-01 20:16:25,539 INFO    MainThread:346729 [wandb_init.py:init():1029] communicating run to backend with 90.0 second timeout
+2025-06-01 20:16:26,709 INFO    MainThread:346729 [wandb_init.py:init():1104] starting run threads in backend
+2025-06-01 20:16:26,770 INFO    MainThread:346729 [wandb_run.py:_console_start():2573] atexit reg
+2025-06-01 20:16:26,771 INFO    MainThread:346729 [wandb_run.py:_redirect():2421] redirect: wrap_raw
+2025-06-01 20:16:26,771 INFO    MainThread:346729 [wandb_run.py:_redirect():2490] Wrapping output streams.
+2025-06-01 20:16:26,771 INFO    MainThread:346729 [wandb_run.py:_redirect():2513] Redirects installed.
+2025-06-01 20:16:26,771 INFO    MainThread:346729 [wandb_init.py:init():1150] run started, returning control to user process
+2025-06-01 20:25:25,800 INFO    MsgRouterThr:346729 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 1 handles.
