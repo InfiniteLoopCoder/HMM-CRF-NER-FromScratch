@@ -26,7 +26,8 @@ def check(language, gold_path, my_path):
     with open(gold_path, "r") as g_f, open(my_path, "r") as m_f:
         g_lines = g_f.readlines()
         m_lines = m_f.readlines()
-        # assert len(g_lines) == len(m_lines), "Length is Not Equal."
+
+        #assert len(g_lines) == len(m_lines), "Length is Not Equal."
         for i in range(len(g_lines)):
             if g_lines[i] == "\n":
                 continue
@@ -40,13 +41,36 @@ def check(language, gold_path, my_path):
     return
 
 if __name__ == "__main__":
-    print("--------------------------------English--------------------------------")
-    print("Train Set:")
-    check(language = "English", gold_path="English/train.txt", my_path="English/train_out.txt")
-    print("Validation Set:")
-    check(language = "English", gold_path="English/validation.txt", my_path="English/validation_out.txt")
-    print("--------------------------------Chinese--------------------------------")
-    print("Train Set:")
-    check(language = "Chinese", gold_path="Chinese/train.txt", my_path="Chinese/train_out.txt")
-    print("Validation Set:")
-    check(language = "Chinese", gold_path="Chinese/validation.txt", my_path="Chinese/validation_out.txt")
+    model = input("Model (1/2/3/b->bonus): ")
+    while model not in ['1', '2', '3', 'b']:
+        print("Invalid model. Please choose 1, 2, 3 or b.")
+        model = input("Model (1/2/3/b->bonus): ")
+    
+    if model == 'b':
+        model = 'bonus'
+
+    dataset = input("Dataset (t->train/v->validation/test): ")
+    while dataset not in ['t', 'v', 'test']:
+        print("Invalid dataset. Please choose t, v or test.")
+        dataset = input("Dataset (t->train/v->validation/test): ")
+    
+    if dataset == 't':
+        dataset = 'train'
+    elif dataset == 'v':
+        dataset = 'validation'
+
+    language = input("Language (e->English/c->Chinese): ")
+    while language not in ['e', 'c']:
+        print("Invalid language. Please choose e or c.")
+        language = input("Language (e->English/c->Chinese): ")
+    
+    if language == 'e':
+        language = 'English'
+    else:
+        language = 'Chinese'
+
+    print(f"--------------------------------Test Model {model}--------------------------------")
+    print(f"{language} {dataset.title()} Set:")
+    check(language=language,
+          gold_path=f"{language}/{dataset}.txt", 
+          my_path=f"{language}/{dataset}_{model}.txt")
