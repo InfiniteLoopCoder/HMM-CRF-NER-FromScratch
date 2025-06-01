@@ -75,10 +75,12 @@ class TransformerCRF(nn.Module):
 
         # CRF transition parameters. transitions[i, j] is the score of transitioning from tag_i to tag_j.
         self.transitions = nn.Parameter(torch.randn(self.num_tags, self.num_tags))
-        # Enforce constraints: no transitions to START_TAG, no transitions from STOP_TAG.
+        # IMPORTANT Exception:
+        #  No transitions to START_TAG from any other tag.
+        #  No transitions from STOP_TAG to any other tag.
         # These are handled by setting scores to a very small number.
-        self.transitions.data[tag_to_idx[START_TAG], :] = -10000.0
-        self.transitions.data[:, tag_to_idx[STOP_TAG]] = -10000.0
+        self.transitions.data[:, tag_to_idx[START_TAG]] = -10000.0
+        self.transitions.data[tag_to_idx[STOP_TAG], :] = -10000.0
 
 
     def _get_transformer_emissions(self, sentences, attention_mask):
